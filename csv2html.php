@@ -1,5 +1,7 @@
 <?php
 
+require 'csvToArray.php';
+
 main($argv[1]);
 
 /*----------------------------------------------------------------------------*/
@@ -11,15 +13,6 @@ function main($fileName){
 
 /*----------------------------------------------------------------------------*/
 
-/**
- * read a csv file into an array
- * returns array
- */
-
-function csvToArray($fileName){
-	$arr = array_map('str_getcsv', file($fileName));
-	return $arr;
-}
 	
 /**
  * output to an html table
